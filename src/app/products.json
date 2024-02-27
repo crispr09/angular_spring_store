@@ -28,19 +28,7 @@
       "productImageUrl": "https://www.bigbasket.com/media/uploads/p/l/251039_15-thums-up-soft-drink.jpg",
       "categoryName": "Beverages"
     },
-    {
-      "productId": 715,
-      "productSku": "1",
-      "productName": "tomato",
-      "productPrice": 150.0,
-      "productShortName": "thakkali",
-      "productDescription": "",
-      "createdDate": "2024-02-22T00:43:15.76",
-      "deliveryTimeSpan": "5",
-      "categoryId": 55,
-      "productImageUrl": "",
-      "categoryName": "Fruits & Vegetables"
-    },
+
     {
       "productId": 686,
       "productSku": "110",
@@ -80,19 +68,7 @@
       "productImageUrl": "https://www.bigbasket.com/media/uploads/p/m/10000128_17-fresho-lemon.jpg?tr=w-1920,q=80",
       "categoryName": "Fruits & Vegetables"
     },
-    {
-      "productId": 716,
-      "productSku": "Lays",
-      "productName": "Lays",
-      "productPrice": 10.0,
-      "productShortName": "Lays",
-      "productDescription": "",
-      "createdDate": "2024-02-24T23:50:06.163",
-      "deliveryTimeSpan": "",
-      "categoryId": 57,
-      "productImageUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bigbasket.com%2Fpd%2F102745%2Flays-potato-chips-american-style-cream-onion-flavour-52-g-pouch%2F&psig=AOvVaw0K5iHpxOIPR7mnAGFCTIlB&ust=1708885140944000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMDy55nsxYQDFQAAAAAdAAAAABAE",
-      "categoryName": "Bakery, Cakes & Dairy"
-    },
+
     {
       "productId": 688,
       "productSku": "GUa",

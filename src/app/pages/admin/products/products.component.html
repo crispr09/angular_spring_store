@@ -11,33 +11,18 @@
       </div>
       <div class="card-body">
         <div class="row">
-          <div class="col-3">
+          <div class="col-3" *ngFor="let product of json.data">
             <div class="card">
+              <img
+                class="card-img-top"
+                [src]="product.productImageUrl"
+                alt="Card image"
+              />
               <div class="card-body">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some example text. Some example text.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some example text. Some example text.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some example text. Some example text.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <h4 class="card-title">{{ product.productSku }}</h4>
+                <p class="card-text">{{ product.productName }}</p>
+                <!-- <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a> -->
               </div>
             </div>
           </div>
@@ -57,7 +42,42 @@
           </div>
         </div>
       </div>
-      <div class="card-body"></div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <label for="">SKU</label>
+            <input
+              type="text"
+              [(ngModel)]="productObj.productSku"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-6">
+          <label for="">Name</label>
+          <input
+            type="text"
+            [(ngModel)]="productObj.productName"
+            class="form-control"
+          />
+        </div>
+        <div class="col-6">
+          <label for="">Name</label>
+          <input
+            type="text"
+            [(ngModel)]="productObj.productName"
+            class="form-control"
+          />
+        </div>
+        <div class="col-6">
+          <label for="">Image</label>
+          <input
+            type="text"
+            [(ngModel)]="productObj.productImageUrl"
+            class="form-control"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </div>
