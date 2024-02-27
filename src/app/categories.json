@@ -1,0 +1,80 @@
+{
+  "message": "",
+  "result": true,
+  "data": [
+    {
+      "categoryId": 55,
+      "categoryName": "Fruits & Vegetables",
+      "parentCategoryId": 0
+    },
+    {
+      "categoryId": 56,
+      "categoryName": "Foodgrains, Oil & Masala",
+      "parentCategoryId": 0
+    },
+    {
+      "categoryId": 57,
+      "categoryName": "Bakery, Cakes & Dairy",
+      "parentCategoryId": 0
+    },
+    { "categoryId": 58, "categoryName": "Beverages", "parentCategoryId": 0 },
+    {
+      "categoryId": 59,
+      "categoryName": "Snacks & Branded Foods",
+      "parentCategoryId": 0
+    },
+    {
+      "categoryId": 60,
+      "categoryName": "Beauty & Hygiene",
+      "parentCategoryId": 0
+    },
+    {
+      "categoryId": 61,
+      "categoryName": "Cuts & Sprouts",
+      "parentCategoryId": 55
+    },
+    {
+      "categoryId": 62,
+      "categoryName": "Dals & Pulses",
+      "parentCategoryId": 55
+    },
+    {
+      "categoryId": 63,
+      "categoryName": "Exotic Fruits & Veggies",
+      "parentCategoryId": 55
+    },
+    {
+      "categoryId": 64,
+      "categoryName": "Flower Bouquets, Bunches",
+      "parentCategoryId": 55
+    },
+    {
+      "categoryId": 65,
+      "categoryName": "Atta, Flours & Sooji",
+      "parentCategoryId": 56
+    },
+    { "categoryId": 66, "categoryName": "Dry Fruits", "parentCategoryId": 56 },
+    {
+      "categoryId": 67,
+      "categoryName": "Edible Oils & Ghee",
+      "parentCategoryId": 56
+    },
+    {
+      "categoryId": 68,
+      "categoryName": "Bakery Snacks",
+      "parentCategoryId": 57
+    },
+    {
+      "categoryId": 69,
+      "categoryName": "Cakes & Pastries",
+      "parentCategoryId": 57
+    },
+    { "categoryId": 70, "categoryName": "string", "parentCategoryId": 0 },
+    { "categoryId": 71, "categoryName": "Offers", "parentCategoryId": 0 },
+    { "categoryId": 72, "categoryName": "Paan corner", "parentCategoryId": 0 },
+    { "categoryId": 73, "categoryName": "qq", "parentCategoryId": 0 },
+    { "categoryId": 74, "categoryName": "Drinks", "parentCategoryId": 0 },
+    { "categoryId": 75, "categoryName": "Snacks", "parentCategoryId": 0 },
+    { "categoryId": 76, "categoryName": "soft drinks", "parentCategoryId": 0 }
+  ]
+}
