@@ -76,9 +76,9 @@ export class ProductsComponent implements OnInit {
     this.prod = product;
     this.onNewClick();
   }
-  onResetClick(id: any) {
-    this.prod = new Product();
-  }
+  // onResetClick(id: any) {
+  //   this.prod = new Product();
+  // }
 
   onUpdateProduct(product: any) {
     this.prodService.saveProduct(this.prod).subscribe((product: any) => {
