@@ -11,7 +11,7 @@
       </div>
       <div class="card-body">
         <div class="row">
-          <div class="col-3" *ngFor="let product of json.data">
+          <div class="col-3" *ngFor="let product of productList">
             <div class="card">
               <img
                 class="card-img-top"
@@ -21,8 +21,18 @@
               <div class="card-body">
                 <h4 class="card-title">{{ product.productSku }}</h4>
                 <p class="card-text">{{ product.productName }}</p>
-                <!-- <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a> -->
+                <div
+                  class="btn btn-sm btn-success"
+                  (click)="onEditClick(product)"
+                >
+                  Edit
+                </div>
+                <div
+                  class="btn btn-sm btn-success mx-2"
+                  (click)="onDeleteProduct(product)"
+                >
+                  Delete
+                </div>
               </div>
             </div>
           </div>
@@ -45,37 +55,111 @@
       <div class="card-body">
         <div class="row">
           <div class="col-6">
-            <label for="">SKU</label>
+            <label for="prod.productSku">SKU</label>
             <input
               type="text"
-              [(ngModel)]="productObj.productSku"
+              [(ngModel)]="prod.productSku"
+              class="form-control"
+            />
+          </div>
+          <div class="col-6">
+            <label for="prod.productName">Name</label>
+            <input
+              type="text"
+              [(ngModel)]="prod.productName"
               class="form-control"
             />
           </div>
         </div>
-        <div class="col-6">
-          <label for="">Name</label>
-          <input
-            type="text"
-            [(ngModel)]="productObj.productName"
-            class="form-control"
-          />
+        <div class="row">
+          <div class="col-6">
+            <label for="prod.productShortName">Short Name</label>
+            <input
+              type="text"
+              [(ngModel)]="prod.productShortName"
+              class="form-control"
+            />
+          </div>
+          <div class="col-6">
+            <label for="prod.productPrice">Price</label>
+            <input
+              type="text"
+              [(ngModel)]="prod.productPrice"
+              class="form-control"
+            />
+          </div>
         </div>
-        <div class="col-6">
-          <label for="">Name</label>
-          <input
-            type="text"
-            [(ngModel)]="productObj.productName"
-            class="form-control"
-          />
+        <div class="row">
+          <div class="col-6">
+            <label for="prod.categoryId">Category</label>
+            <select
+              [(ngModel)]="prod.categoryId.categoryId"
+              class="form-select"
+              name="categoryId"
+              #categoryId="ngModel"
+              required
+            >
+              <option value="null" disabled>Select Category</option>
+              <option
+                *ngFor="let category of categoryList"
+                [value]="category.categoryId"
+              >
+                {{ category.categoryName }}
+              </option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="prod.deliveryTimeSpan">Delivery Time</label>
+            <input
+              type="text"
+              [(ngModel)]="prod.deliveryTimeSpan"
+              class="form-control"
+            />
+          </div>
         </div>
-        <div class="col-6">
-          <label for="">Image</label>
-          <input
-            type="text"
-            [(ngModel)]="productObj.productImageUrl"
-            class="form-control"
-          />
+        <div class="row">
+          <div class="col-12">
+            <label for="productImageUrl">Image</label>
+            <input
+              type="text"
+              [(ngModel)]="prod.productImageUrl"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <label for="productDescription">Product Description</label>
+            <input
+              type="text"
+              [(ngModel)]="prod.productDescription"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="btn btn-sm btn-success"
+              (click)="onResetClick(prod.productId)"
+            >
+              Reset
+            </div>
+            <div
+              class="btn btn-sm btn-success mx-2"
+              (click)="onCreateProduct()"
+              *ngIf="prod.productId == 0"
+            >
+              Create Product
+            </div>
+            <div
+              class="btn btn-sm btn-success mx-2"
+              *ngIf="prod.productId !== 0"
+              (click)="onUpdateProduct(prod)"
+            >
+              Update Product
+            </div>
+          </div>
         </div>
       </div>
     </div>
