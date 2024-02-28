@@ -70,6 +70,7 @@ export class ProductsComponent implements OnInit {
     this.prodService.saveProduct(this.prod).subscribe((res: any) => {
       this.getAllProducts();
     });
+    //
   }
   onEditClick(product: any) {
     this.prod = product;
