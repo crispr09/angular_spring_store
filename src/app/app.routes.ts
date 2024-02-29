@@ -4,11 +4,13 @@ import { LayoutComponent } from './pages/admin/layout/layout.component';
 import { ProductsComponent } from './pages/admin/products/products.component';
 import { CategoriesComponent } from './pages/admin/categories/categories.component';
 import { LandingComponent } from './pages/website/landing/landing.component';
+import { CategoryProductsComponent } from './pages/website/category-products/category-products.component';
+import { WebProductsComponent } from './pages/website/web-products/web-products.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'shop',
+    redirectTo: 'webproduct',
     pathMatch: 'full',
   },
   {
@@ -16,9 +18,21 @@ export const routes: Routes = [
     component: LoginComponent,
   },
   {
-    path: 'shop',
+    path: '',
     component: LandingComponent,
+    children: [
+      {
+        path: 'webproduct',
+        component: WebProductsComponent,
+        title: 'no-Products',
+      },
+      {
+        path: 'product/:id',
+        component: CategoryProductsComponent,
+      },
+    ],
   },
+
   {
     path: '',
     component: LayoutComponent,

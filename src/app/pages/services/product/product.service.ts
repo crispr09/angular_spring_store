@@ -14,6 +14,14 @@ export class ProductService {
       Constants.API_END_POINT + Constants.METHODS.GET_ALL_PRODUCTS
     );
   }
+  getAllProductsByCategoryId(id: number) {
+    debugger;
+    return this.http.get(
+      Constants.API_END_POINT +
+        Constants.METHODS.GET_ALL_PRODUCTS_BY_CATEGORY +
+        id
+    );
+  }
   getAllCategory() {
     return this.http.get(
       Constants.API_END_POINT + Constants.METHODS.GET_ALL_CATOGRY
