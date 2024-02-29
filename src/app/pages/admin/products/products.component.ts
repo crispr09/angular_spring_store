@@ -38,20 +38,7 @@ export class ProductsComponent implements OnInit {
   category_json: any;
   cat: Category = new Category();
   prod: Product = new Product();
-  // productObj: any = {
-  //   productId: 690,
-  //   productSku: 'Winkies',
-  //   productName: 'Winkies Layer Cake - Chocolate',
-  //   productPrice: 5.0,
-  //   productShortName: 'Winkies Layer Cake - Chocolate',
-  //   productDescription: 'Winkies Layer Cake - Chocolate, 15 g',
-  //   createdDate: new Date(),
-  //   deliveryTimeSpan: '1day',
-  //   categoryId: 69,
-  //   productImageUrl:
-  //     'https://www.bigbasket.com/media/uploads/p/l/40018011_4-winkies-layer-cake-chocolate.jpg',
-  //   categoryName: 'Cakes & Pastries',
-  // };
+
   constructor(
     private prodService: ProductService,
     private toastr: ToastrService
@@ -85,8 +72,13 @@ export class ProductsComponent implements OnInit {
   }
 
   onCreateProduct() {
-    this.prodService.saveProduct(this.prod).subscribe((res: any) => {
-      this.getAllProducts();
+    this.prodService.saveProduct(this.prod).subscribe((result: any) => {
+      if (result) {
+        this.toastr.success('Product created Successfully');
+        this.getAllProducts();
+      } else {
+        this.toastr.error('Product Not created');
+      }
     });
     //
   }
@@ -99,8 +91,13 @@ export class ProductsComponent implements OnInit {
   }
 
   onUpdateProduct(product: any) {
-    this.prodService.saveProduct(this.prod).subscribe((product: any) => {
-      this.getAllProducts();
+    this.prodService.saveProduct(this.prod).subscribe((result: any) => {
+      if (result) {
+        this.toastr.success('Product updated Successfully');
+        this.getAllProducts();
+      } else {
+        this.toastr.error('Product Not updated');
+      }
     });
   }
   onDeleteProduct(productId: any) {
@@ -111,7 +108,7 @@ export class ProductsComponent implements OnInit {
           this.toastr.success('Product Deleted Successfully');
           this.getAllProducts();
         } else {
-          // this.toastr.error('Product Not Deleted');
+          this.toastr.error('Product Not Deleted');
         }
       });
       //this.getAllProducts();
