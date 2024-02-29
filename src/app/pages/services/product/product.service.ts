@@ -25,6 +25,12 @@ export class ProductService {
       obj
     );
   }
+  updateProduct(obj: any) {
+    return this.http.put(
+      Constants.API_END_POINT + Constants.METHODS.GET_ALL_PRODUCTS,
+      obj
+    );
+  }
 
   deleteProduct(obj: any) {
     return this.http.post(

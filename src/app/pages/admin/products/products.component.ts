@@ -91,7 +91,7 @@ export class ProductsComponent implements OnInit {
   }
 
   onUpdateProduct(product: any) {
-    this.prodService.saveProduct(this.prod).subscribe((result: any) => {
+    this.prodService.updateProduct(this.prod).subscribe((result: any) => {
       if (result) {
         this.toastr.success('Product updated Successfully');
         this.getAllProducts();

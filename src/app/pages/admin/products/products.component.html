@@ -21,6 +21,7 @@
               <div class="card-body">
                 <h4 class="card-title">{{ product.productSku }}</h4>
                 <p class="card-text">{{ product.productName }}</p>
+                <p>Rs.{{ product.productPrice }}</p>
                 <div
                   class="btn btn-sm btn-success"
                   (click)="onEditClick(product)"
@@ -148,7 +149,6 @@
             <div
               class="btn btn-sm btn-success mx-2"
               (click)="onCreateProduct()"
-              *ngIf="prod.productId == 0"
             >
               Create Product
             </div>
