@@ -44,13 +44,8 @@ export class ProductsComponent implements OnInit {
     private toastr: ToastrService
   ) {}
   ngOnInit(): void {
-    // this.json = productsJson;
-    // this.category_json = categoryJson;
     this.getAllCategory();
     this.getAllProducts();
-
-    console.log('categoryList ', this.categoryList);
-    console.log('productList ', this.productList);
   }
   isProductPanelVisible = false;
 
