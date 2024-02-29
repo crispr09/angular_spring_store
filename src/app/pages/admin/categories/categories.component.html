@@ -1,1 +1,25 @@
-<p>categories works!</p>
+<div class="row">
+  <div class="col-12">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Category ID</th>
+          <th>Category Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of products$ | async; let index = index">
+          <td>{{ index + 1 }}</td>
+          <td>{{ item.categoryId }}</td>
+          <td>{{ item.categoryName }}</td>
+          <td>
+            <div class="btn btn-sm btn-success mx-2">Update</div>
+            <div class="btn btn-sm btn-danger mx-2">Delete</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
