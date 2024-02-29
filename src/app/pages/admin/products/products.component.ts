@@ -88,15 +88,10 @@ export class ProductsComponent implements OnInit {
   onDeleteProduct(productId: any) {
     const isDelete = confirm('Are you Sure want to delete?');
     if (isDelete) {
-      this.prodService.deleteProduct(this.prod).subscribe((product: any) => {
+      this.prodService.deleteProduct(productId).subscribe((productId: any) => {
         this.getAllProducts();
       });
       //this.getAllProducts();
     }
   }
-  // getAllCategory2() {
-  //   this.prodService.getAllCategory2(this.cat).subscribe((res: any) => {
-  //     this.categoryList2 = res;
-  //   });
-  // }
 }
